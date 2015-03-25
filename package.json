@@ -1,0 +1,30 @@
+{
+  "name": "trickbag",
+  "version": "1.0.0",
+  "description": "Add support for stacked mixins (separate behaviour) into any prototype.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape ./test | faucet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ayamflow/trickbag"
+  },
+  "keywords": [
+    "mixin",
+    "composition",
+    "hook",
+    "vue",
+    "react"
+  ],
+  "author": "= <=>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ayamflow/trickbag/issues"
+  },
+  "homepage": "https://github.com/ayamflow/trickbag",
+  "devDependencies": {
+    "faucet": "0.0.1",
+    "tape": "^3.5.0"
+  }
+}
