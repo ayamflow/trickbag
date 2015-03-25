@@ -22,11 +22,15 @@ test('Lack of params', function(assert) {
 });
 
 test('Single mixin', function(assert) {
-    assert.plan(2);
+    assert.plan(3);
 
     var mixin = {
         init: function() {
             assert.pass('The mixin has been called.');
+        },
+
+        remove: function() {
+            assert.pass('The mixin method without stack has been called.');
         }
     };
 
@@ -38,6 +42,7 @@ test('Single mixin', function(assert) {
 
     trickbag(model, mixin);
     model.init();
+    model.remove();
 });
 
 test('Stack mixins', function(assert) {
