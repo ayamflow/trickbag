@@ -1,6 +1,6 @@
 {
   "name": "trickbag",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Add support for stacked mixins (separate behaviour) into any prototype.",
   "main": "index.js",
   "scripts": {

@@ -4,7 +4,7 @@ var test = require('tape');
 var trickbag = require('../index.js');
 
 test('Lack of params', function(assert) {
-    assert.plan(2);
+    assert.plan(3);
 
     try {
         trickbag();
@@ -18,6 +18,13 @@ test('Lack of params', function(assert) {
     }
     catch(e) {
         assert.pass('1 param throws an error.');
+    }
+
+    try {
+        trickbag({}, undefined);
+    }
+    catch(e) {
+        assert.pass('Undefined mixins should fail.');
     }
 });
 

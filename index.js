@@ -4,9 +4,8 @@ var toString = Object.prototype.toString;
 var slice = Array.prototype.slice;
 
 module.exports = function applyMixins(object, mixins) {
-    var args = slice.call(arguments);
-    if (args.length < 2) throw new Error('Trickbag need a to be passed an object to apply mixins on.');
-    if (args.length < 1) throw new Error('Trickbag need a to be passed mixins.');
+    if (!object) throw new Error('Trickbag need a to be passed an object to apply mixins on.');
+    if (!mixins) throw new Error('Trickbag need a to be passed mixins.');
     if (toString.call(mixins).toLowerCase() === '[object object]') mixins = [mixins];
 
     var stack = Object.create(null);
